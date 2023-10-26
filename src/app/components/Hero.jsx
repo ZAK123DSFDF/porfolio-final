@@ -3,12 +3,6 @@ import hero2 from "../assets/images/hero2.png";
 import { FaInstagram, FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
 const Hero = () => {
-  const social_media = [
-    { icon: <FaInstagram /> },
-    { icon: <FaFacebook /> },
-    { icon: <FaLinkedin /> },
-    { icon: <FaTwitter /> },
-  ];
   const handleContactClick = () => {
     const contactSection = document.querySelector("#contact");
     if (contactSection) {
@@ -40,13 +34,6 @@ const Hero = () => {
         >
           Contact Me
         </a>
-        <ul className="mt-8 text-3xl flex text-gray-600 gap-5">
-          {social_media?.map((icon, i) => (
-            <li key={i} className=" hover:text-white cursor-pointer">
-              {icon?.icon}
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
   );
