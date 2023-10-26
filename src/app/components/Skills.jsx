@@ -1,10 +1,10 @@
 import { FaCss3, FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
 const Skills = () => {
   const skills = [
-    { icon: <FaCss3 />, level: "Advance" },
-    { icon: <FaHtml5 />, level: "Expert" },
+    { icon: <FaCss3 />, level: "Advanced" },
+    { icon: <FaHtml5 />, level: "Advanced" },
     { icon: <FaNodeJs />, level: "Intermidate" },
-    { icon: <FaReact />, level: "Beginner" },
+    { icon: <FaReact />, level: "Intermidate" },
   ];
   return (
     <section

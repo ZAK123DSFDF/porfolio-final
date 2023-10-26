@@ -1,16 +1,33 @@
-import {
-  AiOutlineMail,
-  AiOutlinePhone,
-  AiFillEnvironment,
-} from "react-icons/ai";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 const Contact = () => {
-  const contact_info = [
-    { icon: <AiOutlineMail />, text: "yourname@gmail.com" },
-    { icon: <AiOutlinePhone />, text: "1233455" },
-    { icon: <AiFillEnvironment />, text: "yourlocation" },
-  ];
+  const form = useRef();
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [message, setMessage] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
+    emailjs
+      .sendForm(
+        "service_a4c7h1c",
+        "template_qay39hi",
+        form.current,
+        "omOd1iovOmwhUUEVo"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast.success("Email sent successfully");
+          setUserName("");
+          setUserEmail("");
+          setMessage("");
+        },
+        (error) => {
+          console.log(error.text);
+          toast.error("Something went wrong");
+        }
+      );
   };
   return (
     <section id="contact" className="py-10 px-3 text-white text-center mt-8">
@@ -23,39 +40,37 @@ const Contact = () => {
         className="mt-16 flex md:flex-row flex-col
          gap-6 max-w-5xl bg-gray-800 md:p-6 p-2 rounded-lg mx-auto"
       >
-        <form className="flex flex-col flex-1 gap-5" onSubmit={handleSubmit}>
+        <form
+          className="flex flex-col flex-1 gap-5"
+          ref={form}
+          onSubmit={handleSubmit}
+        >
           <input
             type="text"
             placeholder="Your Name"
+            name="user_name"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
             className="bg-gray-600 rounded-md border-none p-2 text-2xl placeholder-slate-500"
           />
           <input
             type="Email"
             placeholder="Your Email Address"
+            name="user_email"
+            value={userEmail}
+            onChange={(e) => setUserEmail(e.target.value)}
             className="bg-gray-600 rounded-md border-none p-2 text-2xl placeholder-slate-500"
           />
           <textarea
             placeholder="Your Message"
+            name="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             className="bg-gray-600 rounded-md border-none p-2 text-2xl placeholder-slate-500"
             rows={10}
-          ></textarea>
+          />
           <button className="btn-primary w-fit">Send Message</button>
         </form>
-        <ul className="flex flex-col gap-7 list-none">
-          {contact_info?.map((contact, i) => (
-            <li
-              key={i}
-              className="flex flex-row text-left gap-4 flex-wrap items-center"
-            >
-              <div className="min-w-[3.5rem] text-3xl min-h-[3.5rem] flex items-center justify-center text-white bg-cyan-600 rounded-full">
-                {contact.icon}
-              </div>
-              <div className="md:text-base text-sm break-words">
-                {contact.text}
-              </div>
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
   );

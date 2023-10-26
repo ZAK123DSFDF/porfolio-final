@@ -1,4 +1,5 @@
 import hero from "../assets/images/hero.png";
+import hero2 from "../assets/images/hero2.png";
 import { FaInstagram, FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
 const Hero = () => {
@@ -17,18 +18,18 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex py-10 gap-10 px-7 md:flex-row flex-col items-center"
+      className="min-h-screen flex py-10 gap-52 px-7 md:flex-row flex-col items-center"
     >
-      <Image
-        src={hero}
-        alt=""
-        className="md:w-11/12 object-cover flex-1 flex items-center justify-center h-full"
-      />
+      <div className="rounded-full overflow-hidden w-96 h-96 mx-28 border-4 border-blue-500">
+        <div className="relative w-full h-full">
+          <Image src={hero2} alt="" layout="fill" objectFit="cover" />
+        </div>
+      </div>
 
       <div className="flex-1 flex-col">
         <h1 className="text-cyan-600 md:text-6xl text-5xl">Hello!</h1>
         <h1 className="md:text-5xl text-2xl md:leading-normal leading-10 text-white fond-bold">
-          My Name is VISUALS P
+          My Name is ZEKARIYAS
         </h1>
         <h4 className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-600">
           FullStack Developer

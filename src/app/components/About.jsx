@@ -1,8 +1,8 @@
 const About = () => {
   const Info = [
     { text: "Years experience", count: "01" },
-    { text: "projects completed", count: "10" },
-    { text: "Companies Work", count: "06" },
+    { text: "projects completed", count: "03" },
+    { text: "Companies Work", count: "01" },
   ];
   return (
     <section id="about" className="py-10 text-white">
@@ -15,16 +15,10 @@ const About = () => {
       </p>
       <div className="flex flex-col items-center md:gap-6 gap-12 max-w-6xl mx-auto text-gray-300 mt-5">
         <p className="text-justify leading-7 w-11/12 mx-auto ">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-          assumenda voluptatibus ipsam ducimus? Accusantium saepe iusto quo
-          ullam, odit eum pariatur distinctio eligendi corporis animi autem
-          molestias molestiae ab quia. In, quidem consequatur voluptatum
-          aspernatur nihil at sequi illum error ab excepturi illo labore tempora
-          consequuntur obcaecati quis quae? Cum eaque id quos fugiat quam
-          reprehenderit mollitia sequi? Quam, dolorum! Beatae dolorem libero
-          accusantium nisi nulla dicta tenetur molestias ad fugit architecto
-          doloribus debitis amet itaque eligendi mollitia quam asperiores sint
-          ipsa blanditiis, odit ex atque. Veniam fuga vero alias.
+          I'm a FullStack developer with 1 year of experience. I can work with
+          different javascript frameworks. I can also use different backend
+          technologies. I'm always eager to learn and always update my skillset.
+          I'm drawn to scalable solution to any FullStack applications.
         </p>
         <ul className=" mt-10 flex items-center justify-center md:gap-48 gap-6">
           {Info?.map((content, i) => (

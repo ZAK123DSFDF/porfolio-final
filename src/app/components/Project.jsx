@@ -3,6 +3,8 @@ import project1 from "../assets/images/project1.png";
 import project2 from "../assets/images/project2.jpg";
 import project3 from "../assets/images/project3.jpg";
 import project4 from "../assets/images/project4.jpg";
+import projectFinal1 from "../assets/images/projectFinal1.png";
+import projectFinal2 from "../assets/images/projectFinal2.png";
 import "swiper/css";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css/autoplay";
@@ -12,28 +14,18 @@ import Image from "next/image";
 const Project = () => {
   const projects = [
     {
-      img: project1,
-      name: "Multi Page App",
-      github_link: "https://github.com",
-      live_link: "www.google.com",
+      img: projectFinal1,
+      name: "Music Streaming App",
+      github_link: "https://github.com/ZAK123DSFDF/spotify-final",
+      live_link: "https://spotify-final-nine.vercel.app/",
+      Video: "https://rumble.com/v3rm3mt-spotify-final.html",
     },
     {
-      img: project2,
-      name: "Dental App",
-      github_link: "https://github.com",
-      live_link: "www.google.com",
-    },
-    {
-      img: project3,
-      name: "Crypto App",
-      github_link: "https://github.com",
-      live_link: "www.google.com",
-    },
-    {
-      img: project4,
-      name: "Admin Dashboard",
-      github_link: "https://github.com",
-      live_link: "www.google.com",
+      img: projectFinal2,
+      name: "Learning Management System App",
+      github_link: "https://github.com/ZAK123DSFDF/lms-project-final-SECOND",
+      live_link: "https://lms-project-final-second.vercel.app/",
+      Video: "https://rumble.com/v3rmxj7-lms-final.html",
     },
   ];
   return (
@@ -79,6 +71,14 @@ const Project = () => {
                 className="text-cyan-600 flex rounded-full bg-gray-800 px-2 py-1 w-32 justify-center"
               >
                 Live Demo
+              </a>
+              <a
+                href={projects.Video}
+                rel="noreferrer"
+                target="_blank"
+                className="text-cyan-600 flex rounded-full bg-gray-800 px-2 py-1 w-32 justify-center"
+              >
+                Video
               </a>
             </div>
           </SwiperSlide>

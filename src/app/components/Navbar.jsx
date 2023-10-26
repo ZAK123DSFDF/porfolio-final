@@ -15,7 +15,7 @@ const Navbar = () => {
         sticky ? "bg-white/60 text-gray-900" : "text-white"
       }`}
     >
-      <h4 className="text-xl font-bold mx-7 my-3">VISUALS</h4>
+      <h4 className="text-xl font-bold mx-7 my-3">ZEKARIYAS</h4>
 
       <ul
         className={`${
