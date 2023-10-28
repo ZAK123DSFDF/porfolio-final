@@ -1,10 +1,15 @@
 import { FaCss3, FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
+import { SiMongodb, SiExpress } from "react-icons/si";
+import { DiMysql } from "react-icons/di";
 const Skills = () => {
   const skills = [
     { icon: <FaCss3 />, level: "Advanced" },
     { icon: <FaHtml5 />, level: "Advanced" },
     { icon: <FaNodeJs />, level: "Intermidate" },
     { icon: <FaReact />, level: "Intermidate" },
+    { icon: <SiMongodb />, level: "Intermidate" },
+    { icon: <DiMysql />, level: "Intermidate" },
+    { icon: <SiExpress />, level: "Intermidate" },
   ];
   return (
     <section

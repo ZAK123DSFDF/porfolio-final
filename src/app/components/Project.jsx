@@ -15,6 +15,7 @@ const Project = () => {
       github_link: "https://github.com/ZAK123DSFDF/spotify-final",
       live_link: "https://spotify-final-nine.vercel.app/",
       Video: "https://www.youtube.com/watch?v=V7PAR21P7L8",
+      description: "Tech Stack: Next.js,Supabase and TailwindCSS",
     },
     {
       img: projectFinal2,
@@ -22,6 +23,7 @@ const Project = () => {
       github_link: "https://github.com/ZAK123DSFDF/lms-project-final-SECOND",
       live_link: "https://lms-project-final-second.vercel.app/",
       Video: "https://www.youtube.com/watch?v=DhELKcVyQIc",
+      description: "Tech Stack: Next.js,MYSQL and TailwindCSS",
     },
   ];
   return (
@@ -51,6 +53,7 @@ const Project = () => {
           >
             <Image src={projects.img} alt="" className="rounded-lg" />
             <h3 className="text-xl my-4">{projects.name}</h3>
+            <h3 className="text-cyan-600 my-4">{projects.description}</h3>
             <div className="flex md:flex-row flex-col items-center justify-center gap-3">
               <a
                 href={projects.github_link}
