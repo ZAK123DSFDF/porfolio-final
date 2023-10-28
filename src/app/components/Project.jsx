@@ -1,8 +1,4 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import project1 from "../assets/images/project1.png";
-import project2 from "../assets/images/project2.jpg";
-import project3 from "../assets/images/project3.jpg";
-import project4 from "../assets/images/project4.jpg";
 import projectFinal1 from "../assets/images/projectFinal1.png";
 import projectFinal2 from "../assets/images/projectFinal2.png";
 import "swiper/css";
@@ -18,14 +14,14 @@ const Project = () => {
       name: "Music Streaming App",
       github_link: "https://github.com/ZAK123DSFDF/spotify-final",
       live_link: "https://spotify-final-nine.vercel.app/",
-      Video: "https://rumble.com/v3rm3mt-spotify-final.html",
+      Video: "https://www.youtube.com/watch?v=V7PAR21P7L8",
     },
     {
       img: projectFinal2,
       name: "Learning Management System App",
       github_link: "https://github.com/ZAK123DSFDF/lms-project-final-SECOND",
       live_link: "https://lms-project-final-second.vercel.app/",
-      Video: "https://rumble.com/v3rmxj7-lms-final.html",
+      Video: "https://www.youtube.com/watch?v=DhELKcVyQIc",
     },
   ];
   return (
